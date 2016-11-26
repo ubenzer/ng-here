@@ -1,0 +1,10 @@
+{
+  "name": "ub-here",
+  "dependencies": {
+    "angular": "1.6.0-rc.2",
+    "angular-mocks": "1.6.0-rc.2",
+    "angular-route": "1.6.0-rc.2",
+    "angular-sanitize": "1.6.0-rc.2",
+    "normalize-css": "^5.0.0"
+  }
+}

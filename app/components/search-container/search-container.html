@@ -1,0 +1,12 @@
+<div class="search-container">
+  <search-form on-submit="$ctrl.onSearch(keyword)"></search-form>
+  <div ng-if="$ctrl.cantGetLocation">Search works better when location is enabled.</div>
+  <div ng-if="$ctrl.hasSearch">
+    <div ng-if="!($ctrl.inProgress || $ctrl.hasError)" >
+      <search-result class="search-container__result" ng-repeat="p in $ctrl.searchResults track by p.id" place="p"></search-result>
+      <div ng-if="$ctrl.searchResults.length === 0">We don't have any idea.</div>
+    </div>
+    <div ng-if="$ctrl.inProgress">Loading...</div>
+    <div ng-if="$ctrl.hasError">A problem occurred.</div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="itinerary-container">
+  <div class="itinerary-container__share-container">
+    <button class="button" ng-click="$ctrl.createShareUrl()">Get shareable link</button>
+    <input class="input itinerary-container__share-input" ng-if="$ctrl.shareUrl" ng-model="$ctrl.shareUrl">
+  </div>
+  <div class="itinerary-container__transport-type-container">
+    <label class="itinerary-container__transport-type">
+      <input type="radio" ng-model="$ctrl.transportType" value="car" ng-change="$ctrl.onTransportTypeUpdated()">
+      <span>By Car</span>
+    </label>
+    <label class="itinerary-container__transport-type">
+      <input type="radio" ng-model="$ctrl.transportType" value="bicycle" ng-change="$ctrl.onTransportTypeUpdated()">
+      <span>By Bike</span>
+    </label>
+    <label class="itinerary-container__transport-type">
+      <input type="radio" ng-model="$ctrl.transportType" value="pedestrian" ng-change="$ctrl.onTransportTypeUpdated()">
+      <span>Walking</span>
+    </label>
+  </div>
+  <div class="place-box itinerary-container__place" ng-repeat="p in $ctrl.itineraryItems track by p.id">
+    <place place="p"></place>
+    <button class="button" ng-if="!$first" ng-click="$ctrl.movePlaceUp(p.id)">Move up</button>
+    <button class="button" ng-if="!$last" ng-click="$ctrl.movePlaceDown(p.id)">Move down</button>
+    <button class="button" ng-click="$ctrl.remove(p.id)">Remove</button>
+  </div>
+  <div ng-if="$ctrl.itineraryItems.length === 0">You don't have any places to go yet. Go and search some!</div>
+</div>

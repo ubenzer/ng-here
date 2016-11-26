@@ -1,0 +1,5 @@
+<div class="search-result place-box">
+  <place place="::$ctrl.place"></place>
+  <button class="search-result__add button" ng-if="!$ctrl.inItinerary" ng-click="$ctrl.addToItinerary()">Add to itinerary</button>
+  <button class="search-result__remove button" ng-if="$ctrl.inItinerary" ng-click="$ctrl.removeFromItinerary()">Already added to itinerary</button>
+</div>
