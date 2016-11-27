@@ -1,4 +1,4 @@
-# ub-here
+# ng-here
 A small Angular application to plan multi-stop route
 
 **[Click here for demo](https://ubenzer.github.io/ng-here/app/)**
