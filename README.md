@@ -1,4 +1,6 @@
 # ng-here
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/ubenzer/ng-here.svg)](https://greenkeeper.io/)
 A small Angular application to plan multi-stop route
 
 **[Click here for demo](https://ubenzer.github.io/ng-here/app/)**
